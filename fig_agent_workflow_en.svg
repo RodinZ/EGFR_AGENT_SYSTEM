@@ -1,0 +1,439 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 850" width="1480" height="850" role="img" aria-label="Two-stage multi-agent workflow for pH-selective de novo EGFR binder design: Stage 1 covers epitope perception, scoring of existing EGFR data into a guidance prior, dual-route backbone generation and a five-tier candidate pool; Stage 2 covers structural gating with cross-species scoring, pH-switch design and dual-pool panel selection; a submission block lists the four priorities and the CSV fields.">
+  <defs>
+    <symbol id="ic-protein" viewBox="0 0 72 72"><g>
+    <rect x="22.1844" y="50.2336" width="2" height="6.8467" transform="translate(-31.1506 32.1096) rotate(-45)" fill="#92d3f5"/>
+    <rect x="17.3429" y="45.3919" width="2" height="6.8472" transform="translate(-29.1452 27.2681) rotate(-45)" fill="#ea5a47"/>
+    <rect x="30.1412" y="33.3138" width="2" height="6.2505" transform="translate(-16.6452 32.6929) rotate(-45)" fill="#92d3f5"/>
+    <rect x="34.5608" y="37.7336" width="2" height="6.25" transform="translate(-18.4759 37.1125) rotate(-45)" fill="#ea5a47"/>
+    <rect x="38.4468" y="33.9712" width="2" height="6.8467" transform="translate(-14.8882 38.8457) rotate(-45)" fill="#92d3f5"/>
+    <rect x="33.6053" y="29.1294" width="2" height="6.8472" transform="translate(-12.8828 34.0042) rotate(-45)" fill="#ea5a47"/>
+    <polygon fill="#92d3f5" points="41.7477 30.2523 40.0161 31.9839 37.1138 29.0815 38.1518 28.0435 41.7477 30.2523"/>
+    <polygon fill="#ea5a47" points="44.0376 33.767 42.9185 34.8862 40.0161 31.9839 41.7477 30.2523 44.0376 33.767"/>
+    <rect x="51.3518" y="20.9426" width="2" height="6.25" transform="translate(-1.6848 44.0676) rotate(-45)" fill="#92d3f5"/>
+    <rect x="46.9323" y="16.5227" width="2" height="6.2505" transform="translate(.1458 39.648) rotate(-45)" fill="#ea5a47"/>
+    <rect x="55.8358" y="16.5822" width="2" height="6.8467" transform="translate(2.5008 46.0485) rotate(-45)" fill="#92d3f5"/>
+    <rect x="50.9943" y="11.7404" width="2" height="6.8472" transform="translate(4.5062 41.207) rotate(-45)" fill="#ea5a47"/>
+    <rect x="17.8889" y="54.5291" width="2" height="6.8467" transform="translate(-35.4461 30.3303) rotate(-45)" fill="#92d3f5"/>
+    <rect x="13.0474" y="49.6873" width="2" height="6.8472" transform="translate(-33.4407 25.4888) rotate(-45)" fill="#ea5a47"/>
+    <path fill="#92d3f5" d="M48.8128,31.8422c.792,3.9598,.3747,8.4358-4.08,12.8905-4.4548,4.4548-8.9308,4.872-12.8905,4.08-2.1284-.4313-4.1154-1.2162-5.8761-1.9021-.2122-.0848-.4242-.1697-.6293-.2475-4.5891-1.7748-7.2407-2.4466-10.2459,.5586l-4.4407,4.4407c-1.0748,1.0748-2.8143,1.0748-3.8891,0s-1.0748-2.8143,0-3.8891l4.4407-4.4407c4.0446-4.0446,8.2024-4.1436,11.9854-3.1749,1.6829,.4101,3.2951,1.0465,4.7871,1.6334,.5586,.2192,1.0961,.4313,1.6122,.6223,4.5326,1.6758,7.5731,2.1142,11.2571-1.5698,3.684-3.684,3.2456-6.7245,1.5698-11.2571,.5162,.1909,1.0536,.4031,1.6122,.6223,1.4919,.5869,3.1042,1.2233,4.7871,1.6334Z"/>
+    <path fill="#92d3f5" d="M51.6624,6.7612c1.0748,1.0748,1.0748,2.8143,0,3.8891l-4.4407,4.4407c-3.0052,3.0052-2.3334,5.6568-.5586,10.2459-.2051-.0778-.4172-.1626-.6293-.2475-1.7607-.6859-3.7477-1.4708-5.8761-1.9021-.9687-3.783-.8697-7.9408,3.1749-11.9854l4.4407-4.4407c1.0748-1.0748,2.8143-1.0748,3.8891,0Z"/>
+    <path fill="#ea5a47" d="M25.9662,46.9107c1.7607,.6859,3.7477,1.4708,5.8761,1.9021,.9687,3.783,.8697,7.9408-3.1749,11.9854l-4.4407,4.4407c-1.0748,1.0748-2.8143,1.0748-3.8891,0s-1.0748-2.8143,0-3.8891l4.4407-4.4407c3.0052-3.0052,2.3334-5.6568,.5586-10.2459,.2051,.0778,.4172,.1626,.6293,.2475Z"/>
+    <path fill="#ea5a47" d="M65.2388,20.3376c1.0748,1.0748,1.0748,2.8143,0,3.8891l-4.4407,4.4407c-4.0446,4.0446-8.2024,4.1436-11.9854,3.1749-1.6829-.4101-3.2951-1.0465-4.7871-1.6334-.5586-.2192-1.0961-.4313-1.6122-.6223-4.5326-1.6758-7.5731-2.1142-11.2571,1.5698s-3.2456,6.7245-1.5698,11.2571c-.5162-.1909-1.0536-.4031-1.6122-.6223-1.4919-.5869-3.1042-1.2233-4.7871-1.6334-.792-3.9598-.3747-8.4358,4.08-12.8905s8.9308-4.872,12.8905-4.08c2.1284,.4313,4.1154,1.2162,5.8761,1.9021,.2122,.0848,.4242,.1697,.6293,.2475,4.5891,1.7748,7.2407,2.4466,10.2459-.5586l4.4407-4.4407c1.0748-1.0748,2.8143-1.0748,3.8891,0Z"/>
+  </g>
+  <g>
+    <g>
+      <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M23.1932,40.1518c-.7944-3.9626-.3766-8.4301,4.076-12.8827,6.8508-6.8508,13.7371-4.1505,18.7646-2.1779,4.9843,1.9542,7.7305,2.8277,10.8738-.3156l4.4401-4.4401c1.0738-1.0738,2.8153-1.0738,3.8891,0s1.0738,2.8153,0,3.8891l-4.4401,4.4401c-5.835,5.835-11.8986,3.4575-16.7703,1.5468-5.469-2.1448-8.7629-3.1585-12.8681,.9467-3.684,3.684-3.2459,6.7149-1.5669,11.2503"/>
+      <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M31.8511,48.8057c.9568,3.7914,.8586,7.946-3.1864,11.991l-4.4401,4.4401c-1.0738,1.0738-2.8153,1.0738-3.8891,0s-1.0738-2.8153,0-3.8891l4.4401-4.4401c3.0081-3.0081,2.3373-5.6531,.5607-10.2439"/>
+    </g>
+    <g>
+      <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M40.1484,23.193c-.9565-3.7911-.8576-7.9453,3.1868-11.9897l4.4401-4.4401c1.0738-1.0738,2.8153-1.0738,3.8891,0s1.0738,2.8153,0,3.8891l-4.4401,4.4401c-3.0084,3.0084-2.337,5.6534-.5609,10.2443"/>
+      <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M48.8073,31.851c.7937,3.9617,.3748,8.4283-4.0766,12.8797-6.8508,6.8508-13.7371,4.1498-18.7649,2.1783-4.9836-1.9542-7.7305-2.8277-10.8735,.3152l-4.4401,4.4401c-1.0738,1.0738-2.8153,1.0738-3.8891,0s-1.0738-2.8153,0-3.8891l4.4401-4.4401c5.835-5.835,11.8982-3.4572,16.7707-1.5465,5.4683,2.1448,8.7625,3.1582,12.8678-.9471,3.6841-3.6841,3.2456-6.7147,1.5671-11.2501"/>
+    </g>
+    <line x1="50.9838" x2="60.6671" y1="11.3328" y2="21.0161" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line x1="46.7124" x2="56.3471" y1="15.6527" y2="25.2875" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line x1="35.2237" x2="43.423" y1="28.5769" y2="36.7762" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line x1="30.7892" x2="40.459" y1="31.5409" y2="41.2106" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line x1="28.3611" x2="35.4887" y1="36.5112" y2="43.6388" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line x1="17.735" x2="26.5463" y1="45.4536" y2="54.2649" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line x1="13.0033" x2="22.6867" y1="49.3132" y2="58.9966" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g></symbol>
+    <symbol id="ic-mouse" viewBox="0 0 72 72"><g>
+    <path fill="#d0cfce" d="m21.7898,17.0696l-5.5522-5.5148c-1.0533-.8844-2.4639-.5512-3.8009-.2288l-.1283.0309c-.97.2339-1.6807.7571-2.2845,1.5514l-2.1754,3.2533c-.7004.9214-.6168,2.1644-.454,3.3103l.7144,5.176c.0929.6534.3338,1.2769.7043,1.823l2.9633,4.1985c.3294.4854.7539.8988,1.2479,1.2152l.6261.401c1.4585.9342,4.5319,1.7084,2.2028,5.1257l-.5496,4.2089c-.0838.5054-.0965,1.6388,0,2.1419l.8244,5.0684c.1383.7208.5985,1.8179,1.0686,2.3816l1.9236,2.1678c.4137.4961,1.0909.9638,1.678,1.2332l10.145,4.5411,3.1033,1.545c.6694.3293,1.3242.9575,2.069.9152l.7909-.0449c.5872-.0333,1.1614-.1859,1.6877-.4483l2.5888-1.291c.0691-.0344.139-.067.2098-.0977l9.785-4.2431c.3436-.149.6665-.342.9605-.574l3.1346-2.4742c.7805-.6161,2.2412-3.5271,2.4588-4.4974l.422-3.9204c.1136-.5064.1352-1.0291.0639-1.5432l-.588-7.204c-.2111-1.5212.3007-.7836,1.5053-1.7362l.7478-.5914c.3447-.2726.6458-.596.8932-.9591l3.9919-5.8605c.3464-.5086.5805-1.0851.6867-1.6913l.8908-5.0859c.1252-.7148.0688-1.4496-.164-2.137l-.9727-2.8716c-.3104-.9164-.9186-1.7024-1.7277-2.2329l-1.3523-.8866c-1.4326-.9392-2.7883-.1713-4.2277.7574l-1.3094,1.0026c-.21.1355-.4078.2889-.5914.4585l-3.8723,3.7008c-2.4911,4.0854-4.3608,1.0929-5.9372.4037l-3.1967-1.0016c-.4629-.2024-1.2561-.566-1.7604-.5979h-7.3072c-.5376-.034-7.3695,2.5222-7.3695,2.5222-1.182.5423-2.6294.6851-3.5373-.2459-.3021-.3099-.9443-.9143-1.2296-1.1539Z"/>
+    <path fill="#ffa7c0" d="m60.1806,13.2168l-.3822.3024c-.2975.2353-.5511.5212-.7494.8445l-4.2829,6.9842c-.3116.5081-.4765,1.0925-.4765,1.6884v7.9029c0,.5676.1448,1.1255.4322,1.6148.0084.0144.017.0289.0256.0435,1.0318,1.7407,3.4161,2.0759,4.9202.7222l3.1217-2.8096c.2928-.2635.535-.5784.7145-.9291l2.2714-4.4377c.1755-.3429.2882-.7144.3329-1.0969l.675-5.7795c.0691-.5919-.0268-1.1914-.2773-1.7321l-.6136-1.3248c-.1479-.3193-.3469-.6123-.5893-.8673l-.7769-.8177c-1.1508-1.2112-3.0353-1.3448-4.3455-.3083Z"/>
+    <path fill="#ffa7c0" d="m13.6032,13.2895l.3822.3024c.2974.2353.5511.5212.7494.8445l4.2829,6.9842c.3116.5081.4765,1.0924.4765,1.6884v7.9029c0,.5676-.1448,1.1255-.4322,1.6148-.0084.0144-.017.0289-.0256.0435-1.0318,1.7407-3.2272,1.8327-4.7313.4791l-2.9402-2.8571c-.2928-.2635-.5349-.5784-.7144-.9291l-2.1925-3.9878c-.1755-.3429-.2875-.83-.3322-1.2126l-.6926-5.7762c-.0691-.5919.0268-1.1914.2773-1.7321l.1812-1.3716c.1479-.3193.3469-.6122.5893-.8673l.7769-.8177c1.1508-1.2112,3.0353-1.3449,4.3455-.3083Z"/>
+  </g>
+  <g>
+    <circle cx="26.7818" cy="38.6203" r="3"/>
+    <line x1="37" x2="37" y1="54.469" y2="57.491" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42.0616,59.9329l10.4088-4.5136c10.5713-5.4638,5.345-20.6675,5.345-20.6675,4.3948-1.7817,6.8394-6.0914,6.8394-6.0914,6.3409-12.3194-.2162-16.7439-3.6864-18.1503-1.0579-.4287-2.2666-.1795-3.0757.6257l-8.3325,7.6996c-8.3737-4.9392-16.7472-4.9392-25.1207,0l-8.3325-7.6996c-.809-.8052-2.0178-1.0544-3.0757-.6257-3.47,1.4064-10.027,5.8309-3.6862,18.1503,0,0,2.4446,4.3097,6.8394,6.0914,0,0-5.2263,15.2037,5.345,20.6675l10.4088,4.5136c2.7411,2.534,7.3824,2.5339,10.1233,0Z"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13.4527,14.728s8.077,3.8724,5.2263,16.5211"/>
+    <circle cx="47.2182" cy="38.6203" r="3"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m60.5473,14.728s-8.077,3.8724-5.2263,16.5211"/>
+    <path d="m34.449,50.265c1.4173-.2612,3.1422-.4049,4.971-.1656,1.8102.2369,2.6036,1.9215,1.4716,3.0418l-1.9003,1.8806c-.9386.9289-2.7309.9772-3.7505.1011l-2.0222-1.7375c-1.2421-1.0671-.5736-2.788,1.2304-3.1204Z"/>
+  </g></symbol>
+    <symbol id="ic-target" viewBox="0 0 72 72"><g>
+    <circle cx="39.4882" cy="39.4552" r="29.85" fill="#EA5A47" stroke="none"/>
+    <circle cx="39.4882" cy="39.4552" r="23.85" fill="#FFFFFF" stroke="none"/>
+    <circle cx="39.4882" cy="39.4552" r="15.85" fill="#EA5A47" stroke="none"/>
+    <circle cx="39.4882" cy="39.4552" r="10.9" fill="#FFFFFF" stroke="none"/>
+    <circle cx="39.4882" cy="39.4552" r="5.9" fill="#EA5A47" stroke="none"/>
+  </g>
+  <g/>
+  <g/>
+  <g/>
+  <g>
+    <line x1="11.4659" x2="2.5131" y1="11.4989" y2="11.4989" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="11.4662" x2="11.4663" y1="11.4989" y2="2.546" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="15.5067" x2="6.5538" y1="15.5473" y2="15.5473" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="15.5086" x2="15.5086" y1="15.5454" y2="6.5925" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="39.4865" x2="7.4778" y1="39.4644" y2="7.5188" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M21.9689,16.3467c4.8593-3.674,10.9579-5.8915,17.5193-5.8915c16.0163,0,29,12.9837,29,29s-12.9837,29-29,29s-29-12.9837-29-29 c0-6.5467,2.1693-12.5867,5.8283-17.4404"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M26.2567,20.6399c3.7421-2.6364,8.306-4.1847,13.2315-4.1847c12.7025,0,23,10.2975,23,23s-10.2975,23-23,23s-23-10.2975-23-23 c0-4.8704,1.5138-9.3872,4.0966-13.1056"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M32.04,26.4321c2.1945-1.2578,4.7374-1.9769,7.4482-1.9769c8.2843,0,15,6.7157,15,15s-6.7157,15-15,15s-15-6.7157-15-15 c0-2.6162,0.7305-5.1268,1.9079-7.268"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40.0779,34.4744c2.4674,0.3067,4.3769,2.4111,4.3769,4.9616c0,2.7614-2.2386,5-5,5c-2.4824,0-4.5422-1.809-4.9332-4.1806"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M35.7775,30.1663c1.1474-0.4587,2.3996-0.7111,3.7107-0.7111c5.5228,0,10,4.4772,10,10s-4.4772,10-10,10s-10-4.4771-10-10 c0-1.2548,0.252-2.4731,0.6858-3.5895"/>
+  </g></symbol>
+    <symbol id="ic-robot" viewBox="0 0 72 72"><g>
+    <path fill="#D22F27" d="M34,16.1123v-2.5109c0-1.3807,1.1193-2.5,2.5-2.5l0,0c1.3807,0,2.5,1.1193,2.5,2.5v2.5"/>
+    <path fill="#D0CFCE" d="M13.5,41.1014L13.5,41.1014c-1.3807,0-2.5-1.1193-2.5-2.5v-8c0-1.3807,1.1193-2.5,2.5-2.5l0,0 c1.3807,0,2.5,1.1193,2.5,2.5v8C16,39.9821,14.8807,41.1014,13.5,41.1014z"/>
+    <path fill="#D0CFCE" d="M58.5,41.1014L58.5,41.1014c1.3807,0,2.5-1.1193,2.5-2.5v-8c0-1.3807-1.1193-2.5-2.5-2.5l0,0 c-1.3807,0-2.5,1.1193-2.5,2.5v8C56,39.9821,57.1193,41.1014,58.5,41.1014z"/>
+    <path fill="#D0CFCE" d="M47.4505,56.1123h-22.901c-4.7022,0-8.5495-3.8473-8.5495-8.5495v-22.901 c0-4.7022,3.8473-8.5495,8.5495-8.5495h22.901c4.7022,0,8.5495,3.8473,8.5495,8.5495v22.901 C56,52.2649,52.1527,56.1123,47.4505,56.1123z"/>
+    <path fill="#9B9B9A" d="M35.4977,56.1115h13.2865c3.9687,0,7.2158-3.8473,7.2158-8.5495V24.661 c0-4.7022-3.2471-8.5495-7.2158-8.5495h-2.3526"/>
+    <ellipse cx="44.8346" cy="29.0027" rx="2.8338" ry="2.8338" fill="#FFFFFF"/>
+    <ellipse cx="27.3342" cy="29.0022" rx="2.8338" ry="2.8338" fill="#FFFFFF"/>
+    <path fill="#FFFFFF" d="M44.5,47.5005h-17c-2.2,0-4-1.8-4-4l0,0c0-2.2,1.8-4,4-4h17c2.2,0,4,1.8,4,4l0,0 C48.5,45.7005,46.7,47.5005,44.5,47.5005z"/>
+  </g>
+  <g/>
+  <g/>
+  <g/>
+  <g>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2" d="M34,16.0109V13.5c0-1.3807,1.1193-2.5,2.5-2.5l0,0c1.3807,0,2.5,1.1193,2.5,2.5V16"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2" d="M47.4505,56h-22.901C19.8473,56,16,52.1527,16,47.4505v-22.901C16,19.8473,19.8473,16,24.5495,16h22.901 C52.1527,16,56,19.8473,56,24.5495v22.901C56,52.1527,52.1527,56,47.4505,56z"/>
+    <ellipse cx="44.8346" cy="29.0022" rx="2.8338" ry="2.8338" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
+    <ellipse cx="27.3342" cy="29.0017" rx="2.8338" ry="2.8338" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
+    <path fill="none" stroke="#000000" stroke-miterlimit="2" stroke-width="2" d="M44.5,47.5h-17c-2.2,0-4-1.8-4-4l0,0 c0-2.2,1.8-4,4-4h17c2.2,0,4,1.8,4,4l0,0C48.5,45.7,46.7,47.5,44.5,47.5z"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2" d="M13.5,41L13.5,41c-1.3807,0-2.5-1.1193-2.5-2.5v-8c0-1.3807,1.1193-2.5,2.5-2.5l0,0c1.3807,0,2.5,1.1193,2.5,2.5v8 C16,39.8807,14.8807,41,13.5,41z"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2" d="M58.5,41L58.5,41c1.3807,0,2.5-1.1193,2.5-2.5v-8c0-1.3807-1.1193-2.5-2.5-2.5l0,0c-1.3807,0-2.5,1.1193-2.5,2.5v8 C56,39.8807,57.1193,41,58.5,41z"/>
+    <line x1="28" x2="28" y1="40" y2="47" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
+    <line x1="33" x2="33" y1="40" y2="47" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
+    <line x1="38" x2="38" y1="40" y2="47" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
+    <line x1="43" x2="43" y1="40" y2="47" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="2"/>
+  </g></symbol>
+    <symbol id="ic-qc" viewBox="0 0 72 72"><g>
+    <path fill="#d0cfce" d="m34.8755,39.625c-.1825.0002-.3616-.0498-.5176-.1445l-7.6992-4.6592c-.4708-.285-.623-.8967-.3408-1.3692l11.1172-18.5849c.2839-.4741.8983-.6283,1.3724-.3444.0012.0007.0024.0014.0035.0021l7.7,4.6592c.4722.2862.6234.9008.3379,1.3735,0,0-6.8455,11.3672-7.1267,11.8424l-3.9864,6.7349c-.1357.2299-.3581.3957-.6172.46-.0795.0201-.1611.0303-.2431.0301Z"/>
+    <polygon fill="#3f3f3f" points="42.244 13.68 45.666 15.751 43.622 19.152 40.199 17.081 42.244 13.68"/>
+    <rect x="16.9757" y="54.9834" width="37" height="5" fill="#d0cfce"/>
+    <path fill="#d0cfce" d="m51.8325,50.9092c-.1612,0-.3199-.0389-.4629-.1133l-3.5947-1.8789c-.4332-.2264-.6393-.7327-.4873-1.1973l.2451-.75c3.0068-9.1933-1.9766-14.56-5.2148-16.9409-.4318-.3178-.536-.9196-.2364-1.3642l2.2032-3.2706c.1524-.2266.3909-.381.66-.4272.2692-.0448.545.0213.7647.1831,4.59,3.4067,11.67,11.0142,7.5263,23.6851l-.453,1.385c-.1346.4108-.5177.6889-.95.6895l-.0002-.0003Z"/>
+    <circle cx="42.1378" cy="26.325" r="3" fill="#3f3f3f"/>
+    <path fill="#3f3f3f" d="m53.2089,54.4834c-.2814-2.5162-1.8644-5.8122-6.318-5.81-4.4505.0022-8.0577,1.8595-8.06,6.31l14.378-.5Z"/>
+  </g>
+  <g>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m32.2654,37.5809c-.6333.6763-1.663.7951-2.4337.2808-.7827-.4739-1.1443-1.4183-.8782-2.2937"/>
+    <polyline fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="38.862 31.891 34.876 38.625 27.176 33.966 38.293 15.38 45.993 20.039 45.114 21.492"/>
+    <rect x="26.6962" y="35.9521" width="1.9998" height="20.9974" transform="translate(-26.0199 52.7231) rotate(-65.8548)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9998"/>
+    <rect x="16.9757" y="54.9834" width="37" height="5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <rect x="41.4735" y="14.1144" width="3.2641" height="3.9996" transform="translate(7.0046 44.6533) rotate(-58.825)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9998"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m41.1821,50.7991c2.3112-3.1549,6.7422-3.8388,9.8971-1.5277,1.8205,1.3337,2.8964,3.4552,2.8965,5.712"/>
+    <line x1="37.2614" x2="41.1822" y1="50.7991" y2="50.7991" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m48.2379,48.03l.245-.75c3.2038-9.7964-2.1223-15.52-5.572-18.0572"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m45.114,25.9524c4.3016,3.1934,11.1343,10.4529,7.1716,22.572l-.4532,1.3847"/>
+    <circle cx="42.1378" cy="26.325" r="3" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g></symbol>
+    <symbol id="ic-bars" viewBox="0 0 72 72"><g>
+    <rect x="12.05" y="12.05" width="47.9" height="47.9" fill="#fff"/>
+    <rect x="18.32" y="37.6" width="8" height="21.41" fill="#b1cc33"/>
+    <rect x="46.25" y="44.38" width="8" height="14.62" fill="#92d3f5"/>
+    <rect x="32.28" y="21.69" width="8" height="37.32" fill="#d22f27"/>
+  </g>
+  <g/>
+  <g/>
+  <g/>
+  <g>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m18.03 59.01v-21.41h8v21.41"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m45.97 59.01v-14.62h8v14.62"/>
+    <line x1="12.75" x2="28.49" y1="31.28" y2="31.28" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="43.51" x2="59.45" y1="40.82" y2="40.82" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="57.48" x2="59.17" y1="50.37" y2="50.37" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <rect x="12.05" y="12.05" width="47.9" height="47.9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m32 59.01v-37.28h8v37.28"/>
+    <line x1="12.39" x2="14.52" y1="40.82" y2="40.82" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="12.39" x2="14.52" y1="50.37" y2="50.37" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="43.51" x2="59.45" y1="31.28" y2="31.28" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="43.51" x2="59.45" y1="21.74" y2="21.74" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="12.75" x2="28.49" y1="21.74" y2="21.74" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+  </g></symbol>
+    <symbol id="ic-drop" viewBox="0 0 72 72"><g>
+    <path fill="#92D3F5" stroke="none" d="M56.0001,46.7065c0,11.7749-8.9543,21.2965-20,21.2965s-20-9.5455-20-21.3204 c0,0-0.2191-14.3086,16.6559-40.1878c0,0,3.1666-5.3703,6.3541-0.3523C55.8851,32.0216,56.0001,46.7065,56.0001,46.7065"/>
+    <path fill="#61B2E4" stroke="none" d="M36,3.9991C48.875,14.375,55.875,44.8744,55.875,44.8744c0,15.0006-8.8293,23.1265-19.875,23.1265 C36,68.0009,58,49.8744,36,3.9991"/>
+  </g>
+  <g/>
+  <g/>
+  <g/>
+  <g>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M56.0001,46.7065c0,11.7749-8.9543,21.2965-20,21.2965s-20-9.5455-20-21.3204c0,0-0.2191-14.3086,16.6559-40.1878 c0,0,3.1666-5.3703,6.3541-0.3523C55.8851,32.0216,56.0001,46.7065,56.0001,46.7065"/>
+  </g></symbol>
+    <symbol id="ic-tube" viewBox="0 0 72 72"><g>
+    <path fill="#fff" d="m30.059,30.0289l.0486-11.8572s4.0334,2.1868,10.6424.2916l.1944,11.7601s-7.5809,2.1868-10.8853-.1944Z"/>
+    <ellipse cx="35.7203" cy="15.2074" rx="6.5302" ry="2.5828" fill="#fff"/>
+    <path fill="#5c9e31" d="m41.3878,31.7207l.1139,21.128c.0022,3.5932-2.8759,5.581-5.8104,5.9105-.0026.0003-.1552-.043-.5963-.0321-.6004.015-.5719-.0503-1.1488-.2173-2.2112-.8206-3.7488-2.5575-4.2381-5.4223l-.0588-22.2278h0l.0545.0545c1.962.9154,3.6819,1.3441,5.8463,1.2931.9923.0058,1.9829-.0812,2.9589-.26.071-.0119.1539-.0236.2249-.0355,1.0725-.1919,1.1364.0926,2.113-.3906l.541.1993Z"/>
+    <path fill="#b1cc33" d="m29.6697,30.8537c1.9619.9152,2.7326,1.4049,4.8968,1.3538.9923.0058,1.9829-.0812,2.9589-.26v20.9725c.0024,2.9118-2.3328,5.6523-4.7343,4.9044-1.9613-1.4335-2.7683-1.5835-3.2078-4.5498l.0864-22.421Z"/>
+  </g>
+  <g>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42.06,16.9372v35.43c.1486,3.7465-2.7638,6.9062-6.51,7.0628-3.7462-.1565-6.6586-3.3163-6.51-7.0628V17.2855"/>
+    <ellipse cx="35.5433" cy="15.2238" rx="7.3933" ry="3.137" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m42.06,29.84v23.08c.0022,3.5932-2.9088,6.5078-6.502,6.51h-.008c-.6006.0021-1.1985-.0816-1.7754-.2486-2.8026-.7909-4.7372-3.3493-4.7346-6.2614v-23.08"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m29.277,30.8938c1.9619.9152,4.1087,1.3648,6.273,1.3137.9923.0058,1.9829-.0812,2.9589-.26.071-.0119.1539-.0236.2249-.0355,1.0725-.1919,2.1126-.5345,3.0891-1.0178"/>
+  </g></symbol>
+    <symbol id="ic-csv" viewBox="0 0 72 72"><g>
+    <polyline fill="#D0CFCE" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="36,10.9583 55.9577,31.0626 55.9577,60.9583 16.0423,60.9583 16.0423,10.9583 36,10.9583"/>
+  </g>
+  <g/>
+  <g/>
+  <g/>
+  <g>
+    <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="36,10.9583 55.9577,31.0626 55.9577,60.9583 16.0423,60.9583 16.0423,10.9583 36,10.9583"/>
+    <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="36,10.9583 35.9577,31.0626 49.1463,31.0626"/>
+  </g></symbol>
+    <symbol id="ic-data" viewBox="0 0 72 72"><g>
+    <path fill="#d0cfce" stroke="none" d="M11.8799,59.8837h47.6538V42.6789H11.8799V59.8837z"/>
+    <path fill="#9B9B9A" stroke="none" d="M59.6815,21.8342L11.9367,21.738v18.5113l5.2011-0.2299c1.2388-0.8432,0.42-5.6695,0.4861-5.803 c-0.0022-0.8421-0.0826-4.8571,0.0607-5.1954c0.2868-0.6767,9.9393-0.0789,9.935-0.0607l1.3976,4.132 c0.1213-0.1646,10.0877-1.8389,10.0877-1.8389c0.1342,0,2.8583,5.5594,2.8583,5.5594c0.0507-0.055,12.5417,2.7334,12.5088,2.8326 l1.7071,0.1676l3.4293,0.0551L59.6815,21.8342z"/>
+    <path fill="#d0cfce" stroke="none" d="M55.7592,38.8215c-0.0253,0.0764-3.9509-0.8774-6.2834-0.8984 c-9.4883-0.0856-32.1134,0.8027-32.5203,0.6987c-0.4173-0.1066-1.8096,0.2996-1.8837,0.1519 c0.0041,0.5459-0.1171,1.5355-0.0912,2.4913l40.7035,0.0372L55.7592,38.8215z"/>
+    <path fill="#3f3f3f" stroke="none" d="M16.3455,38.8196c-0.0255-0.0511-0.04-0.1049-0.0566-0.1605l-4.2857,0.0538l-0.0912,2.9775l4.4966,0.4861 C16.3835,41.249,16.3514,39.3873,16.3455,38.8196z"/>
+    <path fill="#d0cfce" stroke="none" d="M16.4982,33.8659c0.0329-0.0362,0.0706-0.0638,0.1084-0.0949c0.0544-0.0457,0.1121-0.0849,0.1754-0.1182 c0.0358-0.0183,0.0694-0.0365,0.1076-0.0505c0.1075-0.0406,0.2206-0.0691,0.3428-0.0691h0.1123h11.1739v-0.2734 c0-0.4477,0.114-0.8656,0.3001-1.2423c0-0.0001,0-0.0002,0-0.0002c0.0117-0.0232,0.0245-0.0456,0.0371-0.0681 c0.0445-0.0842,0.0837-0.1716,0.1361-0.2505c-0.0271,0.042-0.0536,0.0843-0.0837,0.1332 c-0.0051,0.0132-0.0141,0.0261-0.0164,0.0394c-0.0001,0.0005-0.007,0.0009-0.0084,0.0014 c-0.0418,0.0694-2.2119-1.3979-2.2261-1.3609c0,0-4.0156-1.191-8.5344,0.2555c-0.1652,0.0529-1.2189,1.2375-1.361,1.16h-0.0001 c-0.017-0.0093-0.0292-0.021-0.0454-0.0306c-0.1397-0.0865-0.2534-0.2014-0.336-0.3438c-0.0136-0.0231-0.0329-0.0417-0.0445-0.066 v2.6199c0.0001-0.0004,0.0004-0.0006,0.0006-0.001C16.3786,34.0178,16.434,33.9378,16.4982,33.8659z"/>
+    <path fill="#d0cfce" stroke="none" d="M16.6149,37.6112c0.0517-0.0429,0.1062-0.0801,0.1659-0.1119c0.0369-0.019,0.0718-0.0374,0.1113-0.0518 c0.1066-0.0403,0.2189-0.0686,0.3403-0.0686h0.2041h23.9307v-0.1523c0-0.1708,0.0197-0.3366,0.0536-0.4977 c0.021-0.1034,0.0577-0.2005,0.091-0.2993c0.0171-0.049,0.0289-0.1,0.049-0.1477c0.0535-0.1308,0.1208-0.2536,0.1946-0.3736 c0.0055-0.0087,0.0099-0.0179,0.0154-0.0266c0.0819-0.1296,0.1753-0.2499,0.2787-0.3642c0.0016-0.0027,0.0083-0.013,0.0083-0.013 l-1.3591-1.9881l-8.3805,0.556l-2.8078,1.4664c0.1137,0,0.2171-0.0288,0.3161-0.0677c-0.0248,0.0081-0.0521,0.0095-0.0778,0.0157 c-0.0758,0.0186-0.1484,0.0464-0.2301,0.0464l0,0H17.3447h-0.1123c-0.1203,0-0.2314-0.0281-0.3369-0.068 c-0.041-0.0148-0.0776-0.0334-0.1158-0.0532c-0.0545-0.0293-0.1043-0.0637-0.1521-0.1025 c-0.1126-0.0878-0.2056-0.1933-0.2721-0.3209c-0.0002-0.0003-0.0005-0.0005-0.0006-0.0007 c0.0089,0.7905-0.0067,2.1071-0.0116,2.9536c0.0411-0.0833,0.0932-0.1601,0.1542-0.2289 C16.5328,37.6737,16.5739,37.6442,16.6149,37.6112z"/>
+    <rect x="28.5893" y="47.4491" width="14.2207" height="6.431" fill="#9B9B9A" stroke="none"/>
+    <path fill="#d0cfce" stroke="none" d="M28.8647,28.1003c-0.0117-0.0149-0.0222-0.0299-0.0347-0.0448c-0.0172-0.0206-0.0414-0.0381-0.061-0.0578 c0.0157,0.0144,0.0284,0.0307,0.0428,0.0459C28.8298,28.0625,28.8485,28.0804,28.8647,28.1003z"/>
+    <path fill="#d0cfce" stroke="none" d="M28.926,29.303c0.0738-0.1033,0.1195-0.2172,0.1493-0.3332v-0.0225 c-0.0289,0.1242-0.0805,0.2453-0.1593,0.3554c-0.1606,0.2242-0.3967,0.3621-0.649,0.404 C28.523,29.6667,28.7632,29.53,28.926,29.303z"/>
+    <path fill="#fcea2b" stroke="none" d="M54.1422,39.3788c-0.4698,0,0.4545-2.0977,0.4545-2.0977c0-0.3555-1.1415-1.7131-1.5907-1.7131 l-8.8721,0.0547c-0.2244,0-1.4766,1.4823-1.4766,1.6584l-0.9439,1.1013c0,0.4518-0.2533,0.5925-0.6643,0.7167l1.5575,0.2707 C42.6066,39.3698,54.1804,39.3788,54.1422,39.3788z"/>
+    <path fill="#92d3f5" stroke="none" d="M42.0212,35.5046l-0.0547-3.1313c-0.0071-0.0147-0.0197-0.0325-0.0276-0.0476 c0.0121,0.0872-1.1648,0.308-1.4079-0.1871c-0.1407-0.2871-0.8955-0.7655-1.2158-0.7655l-7.8576-0.135 c-0.457,0-1.6886,0.7136-1.6886,1.1707l-0.4953,2.1614c0,0.5527-1.1133,0.9682-1.6661,0.9682L42.0212,35.5046z"/>
+    <polygon fill="#3f3f3f" stroke="none" points="59.4114,38.6632 54.9403,38.6897 54.9626,41.9304 59.3651,41.8493"/>
+    <rect x="11.7418" y="15.1127" width="47.9158" height="6.5216" fill="#d0cfce" stroke="none"/>
+    <path fill="#d0cfce" stroke="none" d="M17.6263,31.979c0.0202-0.0089,0.0346-0.0261,0.0541-0.0364 C17.6608,31.9526,17.6466,31.9703,17.6263,31.979z"/>
+    <path fill="#d0cfce" stroke="none" d="M19.0715,29.3801h7.9687c-0.0004,0-0.0007-0.0002-0.0011-0.0002h-7.9776 c-0.1963,0-0.3694,0.0785-0.5116,0.193C18.695,29.4578,18.8726,29.3801,19.0715,29.3801z"/>
+    <path fill="#d0cfce" stroke="none" d="M18.4786,29.621c-0.0215,0.0213-0.0326,0.0506-0.0516,0.0741 C18.4462,29.6718,18.4569,29.6421,18.4786,29.621z"/>
+    <path fill="#ea5a47" stroke="none" d="M29.0717,31.5764l0.0136-2.6288c-0.0289,0.1241-0.9471-0.3725-1.3982-0.6928 c-0.1407-0.1006-8.566-0.0374-8.566-0.0374c-0.4571,0-2.0761,2.0573-2.0761,2.0573s0.6088,1.7768,0.0561,1.7768 c-0.4336,0,11.6885-0.0069,11.6885-0.0069C28.8323,31.9337,29.0717,31.5764,29.0717,31.5764z"/>
+  </g>
+  <g/>
+  <g/>
+  <g/>
+  <g>
+    <polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="11.7512,21.6194 11.7631,42.3123 59.7488,42.3123 59.7369,21.6194"/>
+    <rect x="11.7263" y="15.0026" width="48.0106" height="6.6168" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <rect x="11.7631" y="42.3123" width="47.9857" height="17.3616" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <rect x="28.6098" y="47.0607" width="14.4258" height="6.8479" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M28.1027,28.7207c-0.2997-0.2145-0.6669-0.3408-1.0635-0.3408h-7.9776c-1.0102,0-1.829,0.8189-1.829,1.829v0.8521"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M40.9698,32.4574c-0.2972-0.6082-0.9219-1.0271-1.6444-1.0271h-7.9775c-1.0101,0-1.8291,0.8189-1.8291,1.829v1.2736H17.2326"/>
+    <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M54.0031,38.3785v-1.1524c0-0.914-0.8188-1.655-1.829-1.655h-7.9776c-1.0101,0-1.829,0.741-1.829,1.655v1.1524H17.2326"/>
+  </g></symbol>
+    <symbol id="ic-trend" viewBox="0 0 72 72"><g>
+    <path fill="#fff" d="m12.05 59.91h47.9v-47.9h-47.9z"/>
+    <path fill="#ea5a47" stroke="none" d="M30.5525,40.1841l-7.9964,12.6134l3.3386,2.2033l5.4904-8.9049c0.2539-0.4121,8.8517,2.5407,8.8517,2.5407 l10.8677-25.8022l-3.6863-1.5526l-9.3903,21.5299C37.8131,43.3215,30.5525,40.1841,30.5525,40.1841z"/>
+  </g>
+  <g/>
+  <g/>
+  <g/>
+  <g>
+    <polygon fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" points="47.4182,21.2818 38.115,43.3694 30.5525,40.1841 22.5561,52.7975 25.8947,55.0008 31.8997,45.2613 36.5504,47.0839 40.2368,48.6366 51.1045,22.8344"/>
+    <rect x="12.0515" y="12.0154" width="47.897" height="47.8969" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="50.0686" x2="59.8051" y1="36.085" y2="36.085" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="12.739" x2="37.1791" y1="36.085" y2="36.085" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="45.0242" x2="59.6829" y1="47.9928" y2="47.9928" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="12.739" x2="20.8186" y1="47.9928" y2="47.9928" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="48.1334" x2="48.2509" y1="40.4444" y2="59.3704" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="48.033" x2="48.0367" y1="12.0588" y2="17.1816" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="36.1837" x2="36.1837" y1="51.6503" y2="59.5732" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="36.1837" x2="36.1837" y1="12.3297" y2="37.8307" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="24.2253" x2="24.2253" y1="58.6134" y2="59.5732" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="24.2253" x2="24.2253" y1="11.963" y2="43.0994" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="55.1837" x2="59.2261" y1="24.1772" y2="24.1772" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="12.2635" x2="41.7514" y1="24.1772" y2="24.1772" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+  </g></symbol>
+    <pattern id="hb" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="9" height="9" fill="#f6fafd"/><rect width="3" height="9" fill="#e5eff8"/>
+    </pattern>
+    <pattern id="hy" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="9" height="9" fill="#fdfbf3"/><rect width="3" height="9" fill="#f8f0d8"/>
+    </pattern>
+    <pattern id="hg" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="9" height="9" fill="#f6fbf6"/><rect width="3" height="9" fill="#e4f1e5"/>
+    </pattern>
+    <marker id="g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#98a2ae"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "M PLUS Rounded 1c","Varela Round","PingFang SC","Noto Sans CJK SC",Helvetica,Arial,sans-serif; fill: #2f3640; }
+    .stage { font-size: 24px; font-weight: 700; }
+    .step  { font-size: 14.5px; font-weight: 700; }
+    .band  { font-size: 15px; font-weight: 700; }
+    .lb    { font-size: 13.5px; font-weight: 700; }
+    .bd    { font-size: 12.5px; }
+    .sm    { font-size: 11.5px; fill: #69737f; }
+    .mono  { font-family: "SFMono-Regular",Menlo,Consolas,monospace; font-size: 11.5px; }
+    .box   { fill: #ffffff; stroke: #9aa4b1; stroke-width: 1.4; stroke-dasharray: 6 4; }
+    .sub   { fill: #fbfcfd; stroke: #c3cbd6; stroke-width: 1.1; }
+    .ic    { stroke: #2f3640; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+    .gl    { stroke: #98a2ae; stroke-width: 2.2; fill: none; }
+    .ul    { stroke: #2f3640; stroke-width: 2.4; }
+  </style>
+
+  <!-- ===================== STAGE 1 ===================== -->
+  <text class="stage" x="44" y="40" fill="#3f6ea8">Stage 1: Perception &amp; Generation</text>
+  <rect x="20" y="56" width="710" height="608" rx="16" fill="url(#hb)" stroke="#6f9fd4" stroke-width="2.4" stroke-dasharray="10 6"/>
+  <text class="band" x="486" y="88" text-anchor="middle" fill="#3f6ea8">Constraints and priors that condition generation</text>
+
+  <!-- B1 epitope -->
+  <text class="step" x="44" y="118">Step 1:</text>
+  <text class="step" x="44" y="142">Epitope Perception</text>
+  <line class="ul" x1="44" y1="151" x2="172" y2="151"/>
+  <use href="#ic-protein" x="44" y="160" width="56" height="56"/>
+
+  <rect class="box" x="248" y="98" width="464" height="128" rx="12"/>
+  <use href="#ic-protein" x="303" y="110" width="38" height="38"/>
+  <text class="lb" x="322" y="170" text-anchor="middle">Structure Input</text>
+  <text class="sm" x="322" y="188" text-anchor="middle">PDB 1YY9</text>
+  <text class="sm" x="322" y="206" text-anchor="middle">4.5 Å cutoff</text>
+  <circle cx="455" cy="130" r="16" fill="#eaf4ec" stroke="#2f3640" stroke-width="1.5"/>
+  <circle cx="455" cy="124" r="4.6" fill="#5f9468"/>
+  <path d="M 447 138 a 8 8 0 0 1 16 0" fill="#5f9468"/>
+  <use href="#ic-mouse" x="488" y="112" width="36" height="36"/>
+  <text class="lb" x="480" y="170" text-anchor="middle">Epitope Mapping</text>
+  <text class="sm" x="480" y="188" text-anchor="middle">15 conserved</text>
+  <text class="sm" x="480" y="206" text-anchor="middle">7 divergent</text>
+  <use href="#ic-target" x="619" y="110" width="38" height="38"/>
+  <text class="lb" x="638" y="170" text-anchor="middle">Hotspot Anchors</text>
+  <text class="sm" x="638" y="188" text-anchor="middle">conserved positions</text>
+
+  <line class="gl" x1="480" y1="226" x2="480" y2="250" marker-end="url(#g)"/>
+
+  <!-- B2 data scoring -->
+  <text class="step" x="44" y="276">Step 2:</text>
+  <text class="step" x="44" y="300">Data Scoring</text>
+  <line class="ul" x1="44" y1="309" x2="146" y2="309"/>
+  <use href="#ic-data" x="44" y="318" width="52" height="52"/>
+
+  <rect class="box" x="248" y="256" width="464" height="124" rx="12"/>
+  <rect class="sub" x="266" y="272" width="176" height="92" rx="9"/>
+  <text class="lb" x="354" y="294" text-anchor="middle">Existing EGFR data</text>
+  <text class="sm" x="354" y="316" text-anchor="middle">human 923</text>
+  <text class="sm" x="354" y="334" text-anchor="middle">mouse 90　·　cyno 90</text>
+  <text class="sm" x="354" y="354" text-anchor="middle">scored by the A5 heads</text>
+  <use href="#ic-trend" x="456" y="300" width="36" height="36"/>
+  <path class="gl" d="M 450 346 L 508 346" marker-end="url(#g)"/>
+  <rect class="sub" x="518" y="272" width="176" height="92" rx="9"/>
+  <text class="lb" x="606" y="294" text-anchor="middle">Guidance priors</text>
+  <text class="sm" x="606" y="316" text-anchor="middle">interface residue bias</text>
+  <text class="sm" x="606" y="334" text-anchor="middle">length · charge window</text>
+  <text class="sm" x="606" y="354" text-anchor="middle">liability pre-filter</text>
+
+  <line class="gl" x1="480" y1="380" x2="480" y2="404" marker-end="url(#g)"/>
+
+  <!-- B3 generation -->
+  <text class="step" x="44" y="430">Step 3:</text>
+  <text class="step" x="44" y="454">Dual-Route Generation</text>
+  <line class="ul" x1="44" y1="463" x2="196" y2="463"/>
+  <use href="#ic-robot" x="44" y="472" width="56" height="56"/>
+
+  <rect class="box" x="248" y="410" width="464" height="128" rx="12"/>
+  <circle cx="300" cy="446" r="3" fill="#bcc6d3"/><circle cx="314" cy="438" r="3" fill="#bcc6d3"/>
+  <circle cx="308" cy="456" r="3" fill="#bcc6d3"/><circle cx="322" cy="450" r="3" fill="#bcc6d3"/>
+  <path d="M 334 448 l 12 0" class="gl" marker-end="url(#g)"/>
+  <path d="M 356 438 q 11 -6 18 5 q 7 11 -2 16 q -11 6 -18 -4 q -5 -9 2 -17 z" fill="#d2e2f2" class="ic"/>
+  <text class="lb" x="344" y="486" text-anchor="middle">Route A　RFdiffusion3</text>
+  <text class="sm" x="344" y="504" text-anchor="middle">9 rounds partial diffusion</text>
+  <rect x="574" y="432" width="28" height="28" rx="7" fill="#e4f2e6" class="ic"/>
+  <rect x="606" y="443" width="28" height="28" rx="7" fill="#fbeef0" class="ic"/>
+  <text class="lb" x="604" y="486" text-anchor="middle">Route B　BindCraft</text>
+  <text class="sm" x="604" y="504" text-anchor="middle">FreeBindCraft → refold</text>
+  <line x1="268" y1="514" x2="692" y2="514" stroke="#dfe4ea" stroke-width="1.2"/>
+  <circle cx="300" cy="530" r="6" fill="#e3ebf4" class="ic"/>
+  <circle cx="316" cy="530" r="6" fill="#e3ebf4" class="ic"/>
+  <circle cx="332" cy="530" r="6" fill="#e3ebf4" class="ic"/>
+  <text class="lb" x="352" y="535">SolubleMPNN inverse folding · ~90 aa</text>
+
+  <line class="gl" x1="480" y1="538" x2="480" y2="562" marker-end="url(#g)"/>
+
+  <!-- B4 candidate pool -->
+  <rect class="box" x="44" y="568" width="668" height="80" rx="12"/>
+  <text class="lb" x="64" y="592">Candidate Pool</text>
+  <text class="sm" x="186" y="592">492 entries / 373 unique　·　low-confidence tiers demoted, not deleted</text>
+  <rect x="64" y="604" width="118" height="32" rx="7" fill="#dbe8f6" class="ic"/>
+  <text class="sm" x="123" y="624" text-anchor="middle">pass_best 87</text>
+  <rect x="190" y="604" width="118" height="32" rx="7" fill="#e7eff8" class="ic"/>
+  <text class="sm" x="249" y="624" text-anchor="middle">ranked 32</text>
+  <rect x="316" y="604" width="118" height="32" rx="7" fill="#f1f3f6" class="ic"/>
+  <text class="sm" x="375" y="624" text-anchor="middle">quick 32</text>
+  <rect x="442" y="604" width="118" height="32" rx="7" fill="#f6f7f9" class="ic"/>
+  <text class="sm" x="501" y="624" text-anchor="middle">refold 294</text>
+  <rect x="568" y="604" width="118" height="32" rx="7" fill="#f6f7f9" class="ic"/>
+  <text class="sm" x="627" y="624" text-anchor="middle">raw 47</text>
+
+  <!-- ===================== STAGE 2 ===================== -->
+  <text class="stage" x="774" y="40" fill="#b08425">Stage 2: Evaluation &amp; Design</text>
+  <rect x="750" y="56" width="710" height="608" rx="16" fill="url(#hy)" stroke="#d6ac4e" stroke-width="2.4" stroke-dasharray="10 6"/>
+  <text class="band" x="1216" y="88" text-anchor="middle" fill="#b08425">Structural gating and cross-species scoring</text>
+
+  <!-- B1 filtering -->
+  <text class="step" x="774" y="118">Step 4:</text>
+  <text class="step" x="774" y="142">Filtering &amp; Scoring</text>
+  <line class="ul" x1="774" y1="151" x2="906" y2="151"/>
+  <use href="#ic-qc" x="774" y="162" width="56" height="56"/>
+  <use href="#ic-bars" x="842" y="170" width="44" height="44"/>
+  <text class="bd" x="774" y="250">all four must pass</text>
+
+  <rect class="box" x="978" y="98" width="464" height="174" rx="12"/>
+  <text class="mono" x="1000" y="132">i_pTM ≥ 0.70</text>
+  <text class="mono" x="1206" y="132">pTM ≥ 0.55</text>
+  <text class="mono" x="1000" y="156">i_pAE ≤ 0.35</text>
+  <text class="mono" x="1206" y="156">Unbound_pLDDT ≥ 0.70</text>
+  <line x1="998" y1="174" x2="1422" y2="174" stroke="#dfe4ea" stroke-width="1.2"/>
+  <text class="lb" x="1000" y="200">ESM2-3B three heads</text>
+  <rect x="1000" y="212" width="80" height="24" rx="12" fill="#e4f2e6" class="ic"/>
+  <text class="sm" x="1040" y="228" text-anchor="middle">human</text>
+  <rect x="1088" y="212" width="80" height="24" rx="12" fill="#fbeef0" class="ic"/>
+  <text class="sm" x="1128" y="228" text-anchor="middle">mouse</text>
+  <rect x="1176" y="212" width="80" height="24" rx="12" fill="#fff4e4" class="ic"/>
+  <text class="sm" x="1216" y="228" text-anchor="middle">cyno</text>
+  <text class="sm" x="1000" y="258">mean ranks　·　min gates the weakest species</text>
+
+  <line class="gl" x1="1210" y1="272" x2="1210" y2="300" marker-end="url(#g)"/>
+
+  <!-- B2 pH -->
+  <text class="step" x="774" y="326">Step 5:</text>
+  <text class="step" x="774" y="350">pH-Switch Design</text>
+  <line class="ul" x1="774" y1="359" x2="900" y2="359"/>
+  <use href="#ic-drop" x="774" y="370" width="56" height="56"/>
+  <text class="bd" x="838" y="402">His pKa ≈ 6.3</text>
+  <text class="sm" x="774" y="446">pH 6.5 ON · pH 7.4 OFF</text>
+
+  <rect class="box" x="978" y="306" width="464" height="174" rx="12"/>
+  <text class="lb" x="1000" y="334">parent: pass_best 87</text>
+  <text class="sm" x="1000" y="356">1–2 His centers at the interface</text>
+  <rect x="998" y="372" width="424" height="62" rx="8" fill="#fdfaf0" stroke="#e0c07a" stroke-width="1.3"/>
+  <text class="mono" x="1012" y="396">final = 0.32·predict + <tspan fill="#c0392b" font-weight="700">0.38·tumor_ph65</tspan> + 0.15·ph_switch</text>
+  <text class="mono" x="1012" y="418">　　　 + 0.10·developability + 0.05·mutation_burden</text>
+  <path class="gl" d="M 1008 458 a 9 9 0 1 0 6 -8" marker-end="url(#g)" stroke-width="1.8"/>
+  <text class="sm" x="1032" y="462">re-scored through Step 4</text>
+
+  <line class="gl" x1="1210" y1="480" x2="1210" y2="508" marker-end="url(#g)"/>
+
+  <!-- B3 panel selection -->
+  <rect class="box" x="774" y="514" width="668" height="104" rx="12"/>
+  <use href="#ic-tube" x="790" y="524" width="24" height="24"/>
+  <text class="lb" x="822" y="542">Panel Selection</text>
+  <rect x="792" y="556" width="290" height="46" rx="9" fill="#f7f9fc" class="ic"/>
+  <text class="lb" x="937" y="576" text-anchor="middle">global_top</text>
+  <text class="sm" x="937" y="593" text-anchor="middle">ceiling probe</text>
+  <rect x="1104" y="556" width="320" height="46" rx="9" fill="#fffaf0" class="ic"/>
+  <text class="lb" x="1264" y="576" text-anchor="middle">diverse_panel</text>
+  <text class="sm" x="1264" y="593" text-anchor="middle">scaffold-rebalanced · main assay panel</text>
+
+  <!-- ===================== SUBMISSION ===================== -->
+  <text class="stage" x="44" y="706" fill="#3f7a44">Submission</text>
+  <rect x="20" y="722" width="1440" height="110" rx="16" fill="url(#hg)" stroke="#6aa86e" stroke-width="2.4" stroke-dasharray="10 6"/>
+
+  <rect class="box" x="42" y="740" width="880" height="84" rx="12"/>
+  <rect x="62" y="765" width="201" height="34" rx="17" fill="#fde9ec" class="ic"/>
+  <circle cx="85" cy="782" r="11" fill="#d9697f"/><text class="sm" x="85" y="786" text-anchor="middle" fill="#ffffff" font-weight="700">P1</text>
+  <text class="lb" x="106" y="787">pH selectivity</text>
+  <rect x="275" y="765" width="201" height="34" rx="17" fill="#e4f2e6" class="ic"/>
+  <circle cx="298" cy="782" r="11" fill="#6f9e76"/><text class="sm" x="298" y="786" text-anchor="middle" fill="#ffffff" font-weight="700">P2</text>
+  <text class="lb" x="319" y="787">mouse cross-react</text>
+  <rect x="488" y="765" width="201" height="34" rx="17" fill="#dfeaf7" class="ic"/>
+  <circle cx="511" cy="782" r="11" fill="#5a86b8"/><text class="sm" x="511" y="786" text-anchor="middle" fill="#ffffff" font-weight="700">P3</text>
+  <text class="lb" x="532" y="787">human affinity</text>
+  <rect x="701" y="765" width="201" height="34" rx="17" fill="#fff2d9" class="ic"/>
+  <circle cx="724" cy="782" r="11" fill="#c9a155"/><text class="sm" x="724" y="786" text-anchor="middle" fill="#ffffff" font-weight="700">＋</text>
+  <text class="lb" x="745" y="787">scaffold diversity</text>
+
+  <rect class="box" x="940" y="740" width="500" height="84" rx="12"/>
+  <use href="#ic-csv" x="962" y="752" width="30" height="30"/>
+  <text class="lb" x="1002" y="774">Submission CSV</text>
+  <text class="sm" x="1160" y="774">Track 1 ≤ 40 designs</text>
+  <text class="mono" x="962" y="808">name</text>
+  <text class="sm" x="1010" y="808">unique id</text>
+  <text class="mono" x="1092" y="808">sequence</text>
+  <text class="sm" x="1168" y="808">10–250 aa</text>
+  <text class="mono" x="1248" y="808">molecule_class</text>
+  <text class="sm" x="1368" y="808">protein</text>
+</svg>
