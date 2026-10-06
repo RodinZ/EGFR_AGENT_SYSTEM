@@ -27,7 +27,7 @@ Execution units, referenced by code below:
 | Code | Stage | Section |
 |---|---|---|
 | A1 | epitope analysis | §3 |
-| A5* | scoring existing data into a guidance set (the A5 scorer applied offline) | §4 |
+| A5 | scoring existing data into a guidance set | §4 |
 | A2 | dual-route generation | §5.1 |
 | A3 | candidate-pool maintenance | §5.3 |
 | A4 | multi-model structural filtering | §6.1 |
@@ -45,7 +45,7 @@ Two workflow-level constraints: the generating units (A2, A6) are separate from 
         ↓
   A1 epitope analysis: conserved + divergent epitopes → hotspot constraints
         ↓
-  A5* data scoring: existing EGFR data → three-species scores → guidance priors
+  A5 data scoring:  existing EGFR data → three-species scores → guidance priors
                     (residue bias / length · charge / liability)
         ↓
   A2 generation ──┬── Route A  RFdiffusion3 → SolubleMPNN → 9 rounds partial diffusion
