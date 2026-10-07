@@ -20,14 +20,15 @@ The goal is to design high-affinity binders against EGFR, ranked by the followin
 
 *Figure 1　Two-stage workflow. Stage 1 derives hotspot constraints from the target structure and generates de novo backbones along two parallel routes; Stage 2 applies multi-model structural filtering and three-species KD scoring, then pH post-design, emitting two candidate pools.*
 
-The route is a closed loop of epitope analysis → data scoring and guidance → generation → structural filtering → KD scoring → pH post-design → panel selection. Human/mouse conserved epitopes serve as hotspot constraints, and the A5 scorer is run over the existing EGFR data to extract statistics that bias generation; RFdiffusion3 and BindCraft run in parallel to produce ~90 aa mini-binders; candidates pass multi-model structural filtering and ESM2-3B three-species scoring before being tiered into the pool; His centres are then placed at the interface in pH post-design, and every new sequence is re-scored for structure and cross-species probability. The loop converges on candidates combining pH selectivity, mouse cross-reactivity and high affinity.
+The route is a closed loop of epitope analysis → guidance set and SFT → generation → structural filtering → KD scoring → pH post-design → panel selection. Human/mouse conserved epitopes serve as hotspot constraints, and a guidance set built from experimental measurements plus the agent's own scored candidates supervises a multi-objective fine-tune of the generator; RFdiffusion3 and BindCraft run in parallel to produce ~90 aa mini-binders; candidates pass multi-model structural filtering and ESM2-3B three-species scoring before being tiered into the pool; His centres are then placed at the interface in pH post-design, and every new sequence is re-scored for structure and cross-species probability. The loop converges on candidates combining pH selectivity, mouse cross-reactivity and high affinity.
 
 Execution units, referenced by code below:
 
 | Code | Stage | Section |
 |---|---|---|
 | A1 | epitope analysis | §3 |
-| A5 | scoring existing data into a guidance set | §4 |
+| A5 | guidance-set scoring | §4.1 |
+| A2′ | multi-objective end-to-end SFT | §4.2 |
 | A2 | dual-route generation | §5.1 |
 | A3 | candidate-pool maintenance | §5.3 |
 | A4 | multi-model structural filtering | §6.1 |
@@ -45,8 +46,11 @@ Two workflow-level constraints: the generating units (A2, A6) are separate from 
         ↓
   A1 epitope analysis: conserved + divergent epitopes → hotspot constraints
         ↓
-  A5 data scoring:  existing EGFR data → three-species scores → guidance priors
-                    (residue bias / length · charge / liability)
+  A5  guidance set: experimental data + agent-generated candidates
+                    → three-species scoring → weighted merged set
+        ↓
+  A2′ multi-objective SFT: objective-conditioned fine-tune (P1 > P2 > P3)
+                    → novelty filter against the guidance set
         ↓
   A2 generation ──┬── Route A  RFdiffusion3 → SolubleMPNN → 9 rounds partial diffusion
                   └── Route B  BindCraft / FreeBindCraft → SolubleMPNN → refold
@@ -79,23 +83,35 @@ Hotspots are drawn mainly from conserved epitopes, so that P2 (cross-species bin
 
 ---
 
-## 4. Data Scoring and Generation Guidance
+## 4. Guidance Set and Multi-Objective SFT
 
-The existing EGFR data had so far only been used to train the KD predictor. This step turns the A5 scorer back onto that data and converts the resulting scores into constraints handed down to generation.
+Generation is conditioned on a guidance set built from two sources and consumed by an end-to-end fine-tune, rather than on hand-written heuristics alone.
 
-**Input**: human 923 records (Claude 90 + ProteinBase EGFR 833), mouse 90, cyno 90.
+### 4.1 Guidance Set Construction
 
-**Steps**:
+| Source | Content | Label |
+|---|---|---|
+| Experimental | ProteinBase EGFR 833 + Claude 90 (human), mouse 90, cyno 90 | measured binder / non-binder, KD where available |
+| Agent-generated | the 492 de novo candidates of §5.2 | structural metrics plus ESM2-3B three-species scores, used as pseudo-labels |
 
-1. Re-score all existing records with the ESM2-3B three-species heads, giving per-record species probabilities and a cross-species composite
-2. Keep records with a high human probability whose `cross_species_min_prob` does not collapse, forming a high-quality positive set
-3. Extract **statistics** from that positive set: residue preference at interface positions, length distribution, net-charge and hydrophobicity windows, developability liability frequencies
-4. Hand those statistics to A2 as generation constraints: position-specific amino-acid bias for SolubleMPNN, plus a fast post-generation pre-filter on length, net charge and liabilities
-5. Use the same positive set to calibrate the scorer: compare the score distribution of de novo candidates against known positives to detect extrapolation drift on the de novo sequence distribution
+Both sources are re-scored with the ESM2-3B three-species heads and merged into one table carrying sequence, source, label or pseudo-label, per-species probability, structural metrics where present, and a confidence weight.
 
-**Compliance boundary**: only distribution-level statistics and biases are passed down. No sequence, fragment or motif from an existing binder may seed generation, and no sequence in the guidance set enters the candidate pool or the submission.
+The experimental set alone is small — 923 human records and under 100 each for mouse and cyno — and skewed towards antibody-like binders. The agent-generated set covers the de novo sequence distribution the generator actually samples from, which the experimental set does not. Experimental records therefore carry a higher confidence weight than pseudo-labels, so the latter broaden coverage without dominating the objective.
 
-**Outputs**: `gene_data/guidance_set.csv` (the scored table of existing data) and `gene_data/guidance_priors.json` (position biases and pre-filter thresholds).
+Outputs: `gene_data/guidance_set.csv` (merged, scored, weighted) and `gene_data/guidance_priors.json` (position-specific residue bias, length and net-charge windows, liability pre-filter thresholds).
+
+### 4.2 Multi-Objective End-to-End SFT
+
+The guidance set supervises an end-to-end fine-tune of the generator, so the three objectives steer sampling directly instead of being applied only as a post-hoc filter.
+
+- **Conditioning**: objective embeddings for pH selectivity, cross-species binding and affinity, so a design can be sampled under a chosen objective mix
+- **Loss**: sequence likelihood plus three weighted objective terms, ordered P1 > P2 > P3 to match §1
+- **Sample weighting**: experimental records above agent pseudo-labels, as in §4.1
+- **Output**: a fine-tuned generator used by A2 alongside unconditioned sampling, with both kept in the pool so the fine-tune cannot silently narrow the search
+
+**Novelty filter**: every sampled design is checked for sequence identity against the full guidance set, and anything above the identity ceiling is discarded. Training on public measurements is the same practice that produced the KD predictor, but a fine-tuned model can memorise and re-emit training sequences; the filter is what keeps that from turning into an existing binder reappearing as a design.
+
+**Compliance boundary**: only distribution-level statistics, weights and model parameters are passed downstream. No sequence, fragment or motif from an existing binder may seed generation, and no sequence in the guidance set enters the candidate pool or the submission.
 
 ---
 
