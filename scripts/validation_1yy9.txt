@@ -1,0 +1,26 @@
+residue    side    pKa_free  pKa_bound dpKa    ddG_switch
+GLU105     binder  6.68      8.21      1.53    -0.711
+GLU472     target  4.79      5.21      0.42    -0.016
+GLU53      binder  4.75      5.18      0.43    -0.015
+ASP344     target  4.57      5.02      0.45    -0.011
+ASP58      binder  4.03      4.71      0.68    -0.007
+TYR101     binder  9.28      9.79      0.51    -0.005
+ASP436     target  3.82      4.53      0.71    -0.004
+TYR59      binder  9.63      10.02     0.39    -0.002
+TYR102     binder  10.18     12.57     2.39    -0.001
+LYS465     target  10.36     11.91     1.55    -0.001
+ASP103     binder  2.43      0.70      -1.73   +0.000
+TYR50      binder  13.43     18.47     5.04    -0.000
+TYR32      binder  11.45     11.97     0.52    -0.000
+TYR104     binder  11.47     12.81     1.34    -0.000
+LYS49      binder  11.11     10.72     -0.39   +0.000
+ARG353     target  12.28     11.56     -0.72   +0.000
+LYS454     target  9.85      9.52      -0.33   +0.002
+HIS346     target  5.01      4.25      -0.76   +0.014
+HIS409     target  6.24      4.96      -1.28   +0.205
+LYS71      binder  8.77      7.52      -1.25   +0.259
+
+ddG_switch total : -0.292 kcal/mol
+affinity ratio   : 1.6x stronger at pH 6.5
+coupled sites    : 20 (one site caps at 1.23 kcal/mol over this window)
+verdict          : FAIL - not a usable switch

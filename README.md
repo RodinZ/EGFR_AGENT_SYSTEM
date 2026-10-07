@@ -79,6 +79,8 @@ Contact epitopes between the cetuximab-like antibody and human EGFR were defined
 
 Sources: PDB 1YY9 + UniProt human EGFR P00533 / mouse EGFR Q01279 | Criterion: 4.5 Å atomic contact cutoff
 
+**Numbering**: positions above are UniProt P00533 precursor numbering, which includes the 24-residue signal peptide. PDB 1YY9 chain A uses mature numbering, so subtract 24 before indexing into the structure — conserved 373/406/408 map to 349/382/384, divergent 377/467/492 map to 353/443/468. Hotspot indices handed to a generator must be in the numbering of the structure file it reads; a 24-residue offset silently moves the hotspot to an unrelated surface patch.
+
 Hotspots are drawn mainly from conserved epitopes, so that P2 (cross-species binding) is constrained structurally at generation time rather than filtered for afterwards.
 
 ---
@@ -184,25 +186,45 @@ The mouse and cyno heads are each trained on roughly 90 records with fewer than 
 
 ### 6.3 pH Post-Design
 
-**Principle**: the histidine side chain has pK<sub>a</sub> ≈ 6.0–6.5 — partially protonated and positively charged at pH 6.5, deprotonated and neutral at pH 7.4. Placing His at the interface makes binding depend on its protonation state, giving a pH ON/OFF switch.
+**Principle**: the histidine side chain has pK<sub>a</sub> ≈ 6.0–6.5 — partially protonated and positively charged at pH 6.5, deprotonated and neutral at pH 7.4. Binding only becomes pH-dependent when an ionizable site titrates differently in the free and bound states, and the size of that dependence follows the proton-linkage relation
+
+```
+dG_site(pH)  = -RT · ln[ (1 + 10^(pKa_bound - pH)) / (1 + 10^(pKa_free - pH)) ]
+ddG_switch   = dG(pH 6.5) - dG(pH 7.4)          negative = stronger binding at pH 6.5
+```
+
+**How many sites are needed**: one fully coupled site can shift binding by at most 2.303·RT·ΔpH = 1.23 kcal/mol across 6.5 → 7.4, about 8× in affinity. Losing detectable binding at pH 7.4 means roughly 100×, so designs carry **three or more coupled ionizable positions**, not one or two.
+
+| Coupled sites | Ceiling | Affinity ratio |
+|---|---|---|
+| 1 | 1.23 kcal/mol | 8× |
+| 2 | 2.46 kcal/mol | 63× |
+| 3 | 3.69 kcal/mol | 502× |
+
+**Titration on the target side**: PROPKA over 1YY9 chain A places EGFR **His409 inside the conserved epitope** with a free pK<sub>a</sub> of 6.24 — 35.5% protonated at pH 6.5 against 6.5% at pH 7.4. In the cetuximab complex that pK<sub>a</sub> falls to 4.96, so the antibody binding mode disfavours the protonated form and binds 0.2 kcal/mol *more weakly* at pH 6.5. Hotspot guidance copied from this epitope therefore biases towards anti-selectivity. A pH 6.5-ON design has to engage His409 in the opposite sense: present a carboxylate that stabilises the protonated state and raises pK<sub>a,bound</sub>. Glu472 (pK<sub>a</sub> 4.79) and Asp436 (pK<sub>a</sub> 3.82) lie 3.8 Å and 4.2 Å from the epitope and stay deprotonated across the window, so they serve as fixed negative partners for a binder-side histidine.
 
 **Steps** (parents restricted to the de novo candidates of §5):
 
 1. Select parents — all candidates in the `structure_pass_best` tier (rank 1–87)
-2. Locate mutable positions — interface contact residues, excluding anchor positions that hydrogen-bond or salt-bridge to conserved epitopes
-3. His enrichment — place 1–2 His centres per parent at interface positions, enumerate combinations, deduplicate
-4. Re-score — pass every new sequence through §6.1 and §6.2 again; parent scores are not carried over
-5. Composite ranking (each term converted to a percentile, then weighted):
+2. Position selection — binder positions able to salt-bridge EGFR His409 take an Asp or Glu; binder histidines go adjacent to Glu472 or Asp436; anchor positions that hydrogen-bond or salt-bridge conserved epitope residues are excluded
+3. Introduce three or more coupled ionizable positions per parent, enumerate combinations, deduplicate
+4. Fold each variant, then run PROPKA on the complex, on the binder alone and on the target alone, and compute `ddg_switch` with the relation above
+5. Gate on `ddg_switch ≤ -1.5 kcal/mol` (about 12×); survivors are re-scored through §6.1 and §6.2, and parent scores are not carried over
+6. Composite ranking (each term converted to a percentile, then weighted):
 
 ```
 final_score = 0.32 × predict          # affinity anchor
-            + 0.38 × tumor_ph65       # pH 6.5 ON / pH 7.4 OFF switch strength
-            + 0.15 × ph_switch        # overall pH sensitivity
+            + 0.38 × ddg_switch       # computed proton-linkage switch strength
+            + 0.15 × ph_switch        # heuristic pH sensitivity, secondary
             + 0.10 × developability   # developability
             + 0.05 × mutation_burden  # penalty on edit count
 ```
 
-The pH term outweighs the affinity term, matching P1 > P3; `predict` is retained as an anchor because introducing His usually lowers affinity, a cost the switch gain has to offset.
+The switch term outweighs the affinity term, matching P1 > P3; `predict` is retained as an anchor because added ionizable residues usually lower affinity, a cost the switch gain has to offset.
+
+**Negative control**: running `scripts/ph_linkage.py` on 1YY9 with the Fab as binder returns `ddg_switch = -0.29 kcal/mol`, a 1.6× ratio, verdict FAIL — a known high-affinity, pH-insensitive binder is correctly rejected by the gate.
+
+**Caveat**: PROPKA is an empirical predictor with a typical error near 0.5–1 pK<sub>a</sub> unit, and the numbers above come from a single crystal structure in a single conformation. APBS Poisson–Boltzmann or constant-pH molecular dynamics would tighten them at one to two orders of magnitude more compute.
 
 ---
 
